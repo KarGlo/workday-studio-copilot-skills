@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+     xmlns="http://www.springframework.org/schema/beans"
+     xmlns:beans="http://www.springframework.org/schema/beans"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:cc="http://www.capeclear.com/assembly/10"
+     xmlns:cloud="urn:com.workday/esb/cloud/10.0"
+     xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+     xmlns:pi="urn:com.workday/picof"
+     xmlns:wd="urn:com.workday/bsvc"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<cc:assembly id="WorkdayAssembly" version="2025.11">
+        <cc:workday-in id="StartHere" routes-to="Initialize">
+            <cc:integration-system name="INT Example"/>
+        </cc:workday-in>
+        <cc:async-mediation id="Initialize" handle-downstream-errors="true">
+            <cc:steps>
+                <cc:eval id="ReadConfiguration">
+                    <cc:expression>props['p.started'] = util.currentTime()</cc:expression>
+                </cc:eval>
+            </cc:steps>
+            <cc:send-error id="OnError" routes-to="ReportFailure"/>
+        </cc:async-mediation>
+        <cc:local-out id="ReportFailure" store-message="none" endpoint="vm://wcc/PutIntegrationMessage">
+            <cc:set name="is.message.severity" value="'CRITICAL'"/>
+            <cc:set name="is.message.summary" value="'Integration failed in ' + context.errorComponentId + ': ' + context.errorMessage"/>
+        </cc:local-out>
+	</cc:assembly>
+
+</beans>

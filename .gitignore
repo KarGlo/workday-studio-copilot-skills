@@ -1,0 +1,16 @@
+# This folder is an Eclipse / Workday Studio workspace.
+# Only the GitHub Copilot skill is versioned; projects, .metadata and everything else stay local.
+/*
+!/.gitignore
+!/README.md
+!/.github/
+/.github/*
+!/.github/skills/
+/.github/skills/*
+!/.github/skills/workday-studio-integration/
+
+# Local only: material derived from Workday projects (pilot projects, StarterKit API catalog)
+/.github/skills/workday-studio-integration/examples/
+/.github/skills/workday-studio-integration/references/ssk-api.md
+
+.DS_Store

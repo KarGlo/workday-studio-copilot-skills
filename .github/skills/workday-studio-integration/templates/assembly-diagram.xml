@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wdnm:Diagram xmlns:wdnm="http://workday.com/studio/editors/notation">
+  <element href="assembly.xml#WorkdayAssembly"/>
+  <visualProperties>
+    <element href="assembly.xml#StartHere"/>
+  </visualProperties>
+  <visualProperties>
+    <element href="assembly.xml#Initialize"/>
+  </visualProperties>
+  <visualProperties>
+    <element href="assembly.xml#ReportFailure"/>
+  </visualProperties>
+  <swimlanes x="40" y="40" name="INT Example" orientation="VERTICAL" elements="//@swimlanes.1"/>
+  <swimlanes name="Main flow">
+    <elements href="assembly.xml#StartHere"/>
+    <elements href="assembly.xml#Initialize"/>
+    <elements href="assembly.xml#ReportFailure"/>
+  </swimlanes>
+</wdnm:Diagram>
