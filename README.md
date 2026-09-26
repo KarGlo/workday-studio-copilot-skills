@@ -45,4 +45,8 @@ java .github/skills/workday-studio-integration/tools/StudioDocs.java element htt
 - **No integration projects:** this repository contains no Workday integration projects, StarterKit code or project-derived examples.
 - **StarterKit mode** expects a neutral StarterKit template project (`BASE_SSK_Template`) that you prepare in your own workspace. See `references/ssk.md`.
 
-This project is not affiliated with or endorsed by Workday, Inc. Workday and Workday Studio are trademarks of Workday, Inc.
+## License
+
+[Apache License 2.0](LICENSE). You may use, modify and redistribute the skill and its tools, including commercially and inside companies, provided you keep the license and copyright notices. The license includes an explicit patent grant.
+
+This project is not affiliated with or endorsed by Workday, Inc. Workday and Workday Studio are trademarks of Workday, Inc. Using the tools requires your own licensed Workday Studio installation.

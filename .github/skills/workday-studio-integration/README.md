@@ -65,6 +65,10 @@ Studio szukane jest w domyślnej lokalizacji. Inną podajesz przez `--studio <ka
 - Pilot i szablon SSK przeszły dodatkowo przez prawdziwy reconciler diagramu Studio, uruchomiony poza GUI (`tools/WdCheck.java`).
 - Pliki Workday (XSD, dokumentacja) **nie są kopiowane** do repo. Referencje zawierają własne opracowanie, a pełną dokumentację narzędzia czytają z lokalnej instalacji Studio.
 
+## Licencja
+
+Apache License 2.0 (plik `LICENSE` w katalogu głównym repozytorium). Skill i narzędzia można swobodnie używać, modyfikować i rozpowszechniać, także komercyjnie w firmach, pod warunkiem zachowania informacji o licencji. Licencja zawiera wprost udzieloną licencję patentową.
+
 ## Znane ograniczenia
 
 - Pilot nie był jeszcze uruchomiony na tenancie Workday. Semantykę runtime (np. `error-as-response`, statusy eventu) opisano według dokumentacji.
